@@ -1,0 +1,591 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #f5f7f6;
+
+    color: #222;
+
+    line-height: 1.5;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+/* ==============================
+   ENCABEZADO
+================================ */
+
+.header {
+
+    background-color: #ffffff;
+
+    border-bottom: 3px solid #3b7d4f;
+
+    padding: 25px 20px;
+
+}
+
+
+.header-container {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    text-align: center;
+
+}
+
+
+.header h1 {
+
+    font-size: 32px;
+
+    color: #285c38;
+
+    margin-bottom: 8px;
+
+}
+
+
+.header p {
+
+    color: #666;
+
+    font-size: 16px;
+
+}
+
+
+/* ==============================
+   CONTENEDOR PRINCIPAL
+================================ */
+
+.main-container {
+
+    max-width: 1100px;
+
+    width: 100%;
+
+    margin: auto;
+
+    padding: 25px 20px;
+
+    flex: 1;
+
+}
+
+
+/* ==============================
+   PANEL DE FILTROS
+================================ */
+
+.search-panel {
+
+    background-color: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    padding: 25px;
+
+    margin-bottom: 25px;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+
+}
+
+
+.search-panel h2 {
+
+    color: #285c38;
+
+    margin-bottom: 8px;
+
+}
+
+
+.instructions {
+
+    color: #666;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* ==============================
+   FILTROS
+================================ */
+
+.filter-group {
+
+    margin-bottom: 18px;
+
+}
+
+
+.filter-group label {
+
+    display: block;
+
+    font-weight: bold;
+
+    margin-bottom: 7px;
+
+}
+
+
+.filter-group select {
+
+    width: 100%;
+
+    padding: 11px;
+
+    border: 1px solid #bbb;
+
+    border-radius: 6px;
+
+    background-color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+}
+
+
+.filter-group select:focus {
+
+    outline: 2px solid #76a985;
+
+}
+
+
+/* ==============================
+   BOTONES
+================================ */
+
+.form-actions {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 20px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.btn-submit {
+
+    background-color: #3b7d4f;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 22px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+}
+
+
+.btn-submit:hover {
+
+    background-color: #285c38;
+
+}
+
+
+.btn-secondary {
+
+    background-color: white;
+
+    color: #3b7d4f;
+
+    border: 2px solid #3b7d4f;
+
+    padding: 10px 22px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+}
+
+
+.btn-secondary:hover {
+
+    background-color: #eef7f0;
+
+}
+
+
+/* ==============================
+   ESTADO
+================================ */
+
+.status-box {
+
+    background-color: #eef7f0;
+
+    border: 1px solid #9bc6a7;
+
+    color: #285c38;
+
+    padding: 14px;
+
+    border-radius: 7px;
+
+    text-align: center;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* ==============================
+   RESULTADOS
+================================ */
+
+.results-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+
+}
+
+
+.results-header h2 {
+
+    color: #285c38;
+
+}
+
+
+.results-counter {
+
+    color: #666;
+
+    font-weight: bold;
+
+}
+
+
+/* ==============================
+   TARJETAS
+================================ */
+
+.results-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fill, minmax(280px, 1fr));
+
+    gap: 20px;
+
+}
+
+
+.card-item {
+
+    background-color: white;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    border: 1px solid #ddd;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+
+    transition: transform 0.2s;
+
+}
+
+
+.card-item:hover {
+
+    transform: translateY(-5px);
+
+}
+
+
+.card-image-box {
+
+    width: 100%;
+
+    height: 220px;
+
+    background-color: #eee;
+
+}
+
+
+.card-image-box img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+.card-body {
+
+    padding: 18px;
+
+}
+
+
+.card-title {
+
+    font-size: 20px;
+
+    color: #285c38;
+
+    margin-bottom: 10px;
+
+}
+
+
+.card-info {
+
+    margin-bottom: 8px;
+
+    color: #555;
+
+}
+
+
+.card-temperament {
+
+    font-size: 14px;
+
+    color: #666;
+
+    margin-top: 10px;
+
+    min-height: 60px;
+
+}
+
+
+.btn-detail {
+
+    margin-top: 15px;
+
+    width: 100%;
+
+    padding: 10px;
+
+    background-color: #3b7d4f;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+}
+
+
+.btn-detail:hover {
+
+    background-color: #285c38;
+
+}
+
+
+/* ==============================
+   MODAL
+================================ */
+
+.detail-modal {
+
+    border: none;
+
+    border-radius: 10px;
+
+    width: 90%;
+
+    max-width: 700px;
+
+    margin: auto;
+
+    padding: 0;
+
+    box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+
+}
+
+
+.detail-modal::backdrop {
+
+    background-color: rgba(0,0,0,0.6);
+
+}
+
+
+.modal-content {
+
+    background-color: white;
+
+    padding: 25px;
+
+    position: relative;
+
+}
+
+
+.btn-close {
+
+    position: absolute;
+
+    right: 15px;
+
+    top: 15px;
+
+    padding: 8px 12px;
+
+    border: none;
+
+    background-color: #eee;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+}
+
+
+.modal-body img {
+
+    width: 100%;
+
+    max-height: 400px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.modal-body h2 {
+
+    color: #285c38;
+
+    margin-bottom: 15px;
+
+}
+
+
+.modal-information {
+
+    color: #444;
+
+    line-height: 1.8;
+
+}
+
+
+/* ==============================
+   FOOTER
+================================ */
+
+.footer {
+
+    background-color: white;
+
+    border-top: 1px solid #ddd;
+
+    padding: 20px;
+
+    text-align: center;
+
+    color: #777;
+
+    font-size: 13px;
+
+}
+
+
+.footer p + p {
+
+    margin-top: 5px;
+
+}
+
+
+/* ==============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 600px) {
+
+    .header h1 {
+
+        font-size: 25px;
+
+    }
+
+
+    .results-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .form-actions {
+
+        flex-direction: column;
+
+    }
+
+
+    .btn-submit,
+    .btn-secondary {
+
+        width: 100%;
+
+    }
+
+}
